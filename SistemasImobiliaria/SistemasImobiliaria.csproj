@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFF09FAC-10FC-47D8-BC32-4C298E4CD301}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SistemasImobiliaria</RootNamespace>
+    <AssemblyName>SistemasImobiliaria</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Npgsql, Version=3.2.5.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.2.5\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controle\AlugueisDB.cs" />
+    <Compile Include="Controle\Conexao.cs" />
+    <Compile Include="Controle\ImoveisDB.cs" />
+    <Compile Include="Controle\PagamentosDB.cs" />
+    <Compile Include="Controle\PessoasDB.cs" />
+    <Compile Include="FrmConsultaAlugueis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaAlugueis.Designer.cs">
+      <DependentUpon>FrmConsultaAlugueis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaImoveis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaImoveis.Designer.cs">
+      <DependentUpon>FrmConsultaImoveis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaPagamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaPagamentos.Designer.cs">
+      <DependentUpon>FrmConsultaPagamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaPessoas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaPessoas.Designer.cs">
+      <DependentUpon>FrmConsultaPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIncluiAlugueis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIncluiAlugueis.Designer.cs">
+      <DependentUpon>FrmIncluiAlugueis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIncluiImoveis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIncluiImoveis.Designer.cs">
+      <DependentUpon>FrmIncluiImoveis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIncluiPagamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIncluiPagamentos.Designer.cs">
+      <DependentUpon>FrmIncluiPagamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIncluiPessoas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIncluiPessoas.Designer.cs">
+      <DependentUpon>FrmIncluiPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Alugueis.cs" />
+    <Compile Include="Modelo\Imoveis.cs" />
+    <Compile Include="Modelo\Pagamentos.cs" />
+    <Compile Include="Modelo\Pessoas.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmConsultaAlugueis.resx">
+      <DependentUpon>FrmConsultaAlugueis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaImoveis.resx">
+      <DependentUpon>FrmConsultaImoveis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaPagamentos.resx">
+      <DependentUpon>FrmConsultaPagamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaPessoas.resx">
+      <DependentUpon>FrmConsultaPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIncluiAlugueis.resx">
+      <DependentUpon>FrmIncluiAlugueis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIncluiImoveis.resx">
+      <DependentUpon>FrmIncluiImoveis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIncluiPagamentos.resx">
+      <DependentUpon>FrmIncluiPagamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIncluiPessoas.resx">
+      <DependentUpon>FrmIncluiPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
