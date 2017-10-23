@@ -57,3 +57,7 @@ C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\D
 C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\RdlCompile.compiled
 C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.exe
 C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.pdb
+C:\Users\dolgu\Documents\Visual Studio 2017\Projects\SistemasImobiliaria\SistemasImobiliaria\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\dolgu\Documents\Visual Studio 2017\Projects\SistemasImobiliaria\SistemasImobiliaria\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\dolgu\Documents\Visual Studio 2017\Projects\SistemasImobiliaria\SistemasImobiliaria\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\dolgu\Documents\Visual Studio 2017\Projects\SistemasImobiliaria\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.Relatorios.FrmRelacaoPessoas.resources
