@@ -33,3 +33,26 @@ C:\Users\dolgu\Documents\Visual Studio 2017\Projects\SistemasImobiliaria\Sistema
 C:\Users\dolgu\Documents\Visual Studio 2017\Projects\SistemasImobiliaria\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmIncluiImoveis.resources
 C:\Users\dolgu\Documents\Visual Studio 2017\Projects\SistemasImobiliaria\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmIncluiPagamentos.resources
 C:\Users\dolgu\Documents\Visual Studio 2017\Projects\SistemasImobiliaria\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmIncluiPessoas.resources
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.csprojResolveAssemblyReference.cache
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmConsultaAlugueis.resources
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmConsultaImoveis.resources
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmConsultaPagamentos.resources
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmConsultaPessoas.resources
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmIncluiAlugueis.resources
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmIncluiImoveis.resources
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmIncluiPagamentos.resources
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmIncluiPessoas.resources
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmPrincipal.resources
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.Properties.Resources.resources
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.csproj.GenerateResource.Cache
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\RdlCompile.cache
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\RdlCompile.compiled
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\bin\Debug\SistemasImobiliaria.exe.config
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\bin\Debug\SistemasImobiliaria.exe
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\bin\Debug\SistemasImobiliaria.pdb
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\bin\Debug\Npgsql.dll
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\bin\Debug\Npgsql.xml
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.exe
+C:\Users\40717\Documents\Visual Studio 2017\Nova pasta\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.pdb
