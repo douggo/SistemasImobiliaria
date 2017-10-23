@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using SistemasImobiliaria.Controle;
 using SistemasImobiliaria.Modelo;
+using SistemasImobiliaria.Relatorios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -76,6 +77,12 @@ namespace SistemasImobiliaria
                 MessageBox.Show("Erro ao alterar pessoa!");
             }
             atualizaTela();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmRelacaoPessoas form = new FrmRelacaoPessoas(conexao);
+            form.Show();
         }
     }
 }
