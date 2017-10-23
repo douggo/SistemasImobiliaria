@@ -1,4 +1,5 @@
 ﻿using Npgsql;
+using SistemasImobiliaria.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Data;

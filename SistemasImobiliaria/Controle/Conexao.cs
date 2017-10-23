@@ -15,7 +15,7 @@ namespace ConFin.modelo
             NpgsqlConnection conexao = null;
             try
             {
-                conexao = new NpgsqlConnection("Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=imobiliaria;");
+                conexao = new NpgsqlConnection("Server=localhost;Port=5432;User Id=postgres;Password=unidavi;Database=sistema_gestao_imobiliaria;");
                 conexao.Open();
             }
             catch (NpgsqlException erro)
