@@ -152,9 +152,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RelConsultaAlugueis.rdlc" />
+    <EmbeddedResource Include="Relatorios\Relação de Imoveis.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelConsultaAlugueis.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelRelaçãoDePessoa.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\SistemasImobiliaria.Modelo.Alugueis.datasource" />
+    <None Include="Properties\DataSources\SistemasImobiliaria.Modelo.Imoveis.datasource" />
+    <None Include="Properties\DataSources\SistemasImobiliaria.Modelo.Pessoas.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
