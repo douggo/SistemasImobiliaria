@@ -32,6 +32,69 @@ namespace SistemasImobiliaria.Controle
             return dt;
         }
 
+        public static DataTable getConsultaImoveis(NpgsqlConnection conexao, int campo, int tipo, String descricao)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                String sql = "SELECT * FROM imoveis";
+                String nomeCampoOrdenacao = "i_imoveis";
+                switch (campo)
+                {
+                    case 0:
+                        sql += " where i_imoveis ";
+                        nomeCampoOrdenacao = "i_imoveis";
+                        break;
+                    case 1:
+                        sql += " where upper(endereco) ";
+                        nomeCampoOrdenacao = "endereco";
+                        break;
+                    case 2:
+                        sql += " where upper(cidade) ";
+                        nomeCampoOrdenacao = "cidade";
+                        break;
+                    default:
+                        sql += " where upper(estado) ";
+                        nomeCampoOrdenacao = "estado";
+                        break;
+                }
+                switch (tipo)
+                {
+                    case 0:
+                        sql += " like upper('%" + descricao + "%')";
+                        break;
+                    case 1:
+                        sql += " like upper('" + descricao + "%')";
+                        break;
+                    case 2:
+                        sql += " like upper('%" + descricao + "')";
+                        break;
+                    case 3:
+                        sql += " = upper('" + descricao + "')";
+                        break;
+                    case 4:
+                        sql += " >= upper('" + descricao + "')";
+                        break;
+                    default:
+                        sql += " <= upper('" + descricao + "')";
+                        break;
+                }
+                sql += " order by " + nomeCampoOrdenacao;
+                NpgsqlCommand cmd = new NpgsqlCommand();
+                cmd.Connection = conexao;
+                cmd.CommandText = sql;
+                NpgsqlDataAdapter dat = new NpgsqlDataAdapter(cmd);
+                dat.Fill(dt);
+            }
+            catch (NpgsqlException erro)
+            {
+                MessageBox.Show("Erro de SQL:" + erro.Message);
+                Console.WriteLine("Erro de SQL:" + erro.Message);
+            }
+
+            return dt;
+        }
+
         public static bool setIncluiImoveis(NpgsqlConnection conexao, Imoveis imoveis)
         {
             bool incluiu = false;

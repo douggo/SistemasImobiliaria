@@ -19,13 +19,22 @@ namespace SistemasImobiliaria
         public FrmConsultaAlugueis(NpgsqlConnection conexao)
         {
             InitializeComponent();
+            comboBoxCampo.SelectedIndex = 0;
+            comboBoxTipo.SelectedIndex = 0;
             this.conexao = conexao;
             atualizaTela();
         }
 
         private void atualizaTela()
         {
-            dataGridView1.DataSource = AlugueisDB.getConsultaAlugueis(conexao);
+            if (textBoxDescricao.Text.Length > 0)
+            {
+                dataGridView1.DataSource = AlugueisDB.getConsultaAlugueis(conexao,comboBoxCampo.SelectedIndex, comboBoxTipo.SelectedIndex, textBoxDescricao.Text);
+            }
+            else
+            {
+                dataGridView1.DataSource = AlugueisDB.getConsultaAlugueis(conexao);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -76,6 +85,14 @@ namespace SistemasImobiliaria
                 MessageBox.Show("Erro ao alterar aluguel!");
             }
             atualizaTela();
+        }
+
+        private void textBoxDescricao_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                atualizaTela();
+            }
         }
     }
 }
