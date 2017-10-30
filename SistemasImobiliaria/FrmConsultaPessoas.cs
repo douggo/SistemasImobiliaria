@@ -21,13 +21,22 @@ namespace SistemasImobiliaria
         public FrmConsultaPessoas(NpgsqlConnection conexao)
         {
             InitializeComponent();
+            comboBoxCampo.SelectedIndex = 0;
+            comboBoxTipo.SelectedIndex = 0;
             this.conexao = conexao;
             atualizaTela();
         }
 
         private void atualizaTela()
         {
-            dataGridView1.DataSource = PessoasDB.getConsultaPessoas(conexao);
+            if (textBoxDescricao.Text.Length > 0)
+            {
+                dataGridView1.DataSource = PessoasDB.getConsultaPessoas(conexao, comboBoxCampo.SelectedIndex, comboBoxTipo.SelectedIndex, textBoxDescricao.Text);
+            }
+            else
+            {
+                dataGridView1.DataSource = PessoasDB.getConsultaPessoas(conexao);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -83,6 +92,14 @@ namespace SistemasImobiliaria
         {
             FrmRelacaoPessoas form = new FrmRelacaoPessoas(conexao);
             form.Show();
+        }
+
+        private void textBoxDescricao_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                atualizaTela();
+            }
         }
     }
 }

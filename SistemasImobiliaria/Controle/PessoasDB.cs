@@ -32,6 +32,69 @@ namespace SistemasImobiliaria.Controle
             return dt;
         }
 
+        public static DataTable getConsultaPessoas(NpgsqlConnection conexao, int campo, int tipo, String descricao)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                String sql = "SELECT * FROM pessoas";
+                String nomeCampoOrdenacao = "i_pessoass";
+                switch (campo)
+                {
+                    case 0:
+                        sql += " where genero ";
+                        nomeCampoOrdenacao = "genero";
+                        break;
+                    case 1:
+                        sql += " where cpf ";
+                        nomeCampoOrdenacao = "cpf";
+                        break;
+                    case 2:
+                        sql += " where endereco ";
+                        nomeCampoOrdenacao = "endereco";
+                        break;
+                    default:
+                        sql += " where nome ";
+                        nomeCampoOrdenacao = "nome";
+                        break;
+                }
+                switch (tipo)
+                {
+                    case 0:
+                        sql += " like '%" + descricao + "%'";
+                        break;
+                    case 1:
+                        sql += " like '" + descricao + "%'";
+                        break;
+                    case 2:
+                        sql += " like '%" + descricao + "'";
+                        break;
+                    case 3:
+                        sql += " = '" + descricao + "')";
+                        break;
+                    case 4:
+                        sql += " >= '" + descricao + "')";
+                        break;
+                    default:
+                        sql += " <= '" + descricao + "')";
+                        break;
+                }
+                sql += " order by " + nomeCampoOrdenacao;
+                NpgsqlCommand cmd = new NpgsqlCommand();
+                cmd.Connection = conexao;
+                cmd.CommandText = sql;
+                NpgsqlDataAdapter dat = new NpgsqlDataAdapter(cmd);
+                dat.Fill(dt);
+            }
+            catch (NpgsqlException erro)
+            {
+                MessageBox.Show("Erro de SQL:" + erro.Message);
+                Console.WriteLine("Erro de SQL:" + erro.Message);
+            }
+
+            return dt;
+        }
+
         public static bool setIncluiPessoas(NpgsqlConnection conexao, Pessoas pessoas)
         {
             bool incluiu = false;

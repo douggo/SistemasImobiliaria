@@ -92,5 +92,13 @@ namespace SistemasImobiliaria
                 atualizaTela();
             }
         }
+
+        private void FrmConsultaImoveis_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                atualizaTela();
+            }
+        }
     }
 }

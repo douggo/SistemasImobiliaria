@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.i_imoveis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -38,10 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxCampo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.i_imoveis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +57,30 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(559, 293);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // i_imoveis
+            // 
+            this.i_imoveis.DataPropertyName = "i_imoveis";
+            this.i_imoveis.HeaderText = "ID do Imóvel";
+            this.i_imoveis.Name = "i_imoveis";
+            // 
+            // endereco
+            // 
+            this.endereco.DataPropertyName = "endereco";
+            this.endereco.HeaderText = "Endereço";
+            this.endereco.Name = "endereco";
+            // 
+            // cidade
+            // 
+            this.cidade.DataPropertyName = "cidade";
+            this.cidade.HeaderText = "Cidade";
+            this.cidade.Name = "cidade";
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
             // 
             // button1
             // 
@@ -151,30 +175,6 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Campos:";
             // 
-            // i_imoveis
-            // 
-            this.i_imoveis.DataPropertyName = "i_imoveis";
-            this.i_imoveis.HeaderText = "ID do Imóvel";
-            this.i_imoveis.Name = "i_imoveis";
-            // 
-            // endereco
-            // 
-            this.endereco.DataPropertyName = "endereco";
-            this.endereco.HeaderText = "Endereço";
-            this.endereco.Name = "endereco";
-            // 
-            // cidade
-            // 
-            this.cidade.DataPropertyName = "cidade";
-            this.cidade.HeaderText = "Cidade";
-            this.cidade.Name = "cidade";
-            // 
-            // estado
-            // 
-            this.estado.DataPropertyName = "estado";
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            // 
             // FrmConsultaImoveis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,6 +196,7 @@
             this.Name = "FrmConsultaImoveis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Imóveis";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FrmConsultaImoveis_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

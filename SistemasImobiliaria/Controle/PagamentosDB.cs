@@ -32,6 +32,69 @@ namespace SistemasImobiliaria.Controle
             return dt;
         }
 
+        public static DataTable getConsultaPagamentos(NpgsqlConnection conexao, int campo, int tipo, String descricao)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                String sql = "SELECT * FROM pagamentos";
+                String nomeCampoOrdenacao = "i_pagamentos";
+                switch (campo)
+                {
+                    case 0:
+                        sql += " where i_pagamentos ";
+                        nomeCampoOrdenacao = "i_pagamentos";
+                        break;
+                    case 1:
+                        sql += " where parcelas ";
+                        nomeCampoOrdenacao = "parcelas";
+                        break;
+                    case 2:
+                        sql += " where valor ";
+                        nomeCampoOrdenacao = "valor";
+                        break;
+                    default:
+                        sql += " where tipo ";
+                        nomeCampoOrdenacao = "tipo";
+                        break;
+                }
+                switch (tipo)
+                {
+                    case 0:
+                        sql += " like '%" + descricao + "%'";
+                        break;
+                    case 1:
+                        sql += " like '" + descricao + "%'";
+                        break;
+                    case 2:
+                        sql += " like '%" + descricao + "'";
+                        break;
+                    case 3:
+                        sql += " = '" + descricao + "')";
+                        break;
+                    case 4:
+                        sql += " >= '" + descricao + "')";
+                        break;
+                    default:
+                        sql += " <= '" + descricao + "')";
+                        break;
+                }
+                sql += " order by " + nomeCampoOrdenacao;
+                NpgsqlCommand cmd = new NpgsqlCommand();
+                cmd.Connection = conexao;
+                cmd.CommandText = sql;
+                NpgsqlDataAdapter dat = new NpgsqlDataAdapter(cmd);
+                dat.Fill(dt);
+            }
+            catch (NpgsqlException erro)
+            {
+                MessageBox.Show("Erro de SQL:" + erro.Message);
+                Console.WriteLine("Erro de SQL:" + erro.Message);
+            }
+
+            return dt;
+        }
+
         public static bool setIncluiPagamentos(NpgsqlConnection conexao, Pagamentos pagamentos)
         {
             bool incluiu = false;
