@@ -121,6 +121,36 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRelacaoAlugueis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelacaoAlugueis.Designer.cs">
+      <DependentUpon>FrmRelacaoAlugueis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelacaoDeImoveis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelacaoDeImoveis.Designer.cs">
+      <DependentUpon>FrmRelacaoDeImoveis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelacaoDeImoveisPorPessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelacaoDeImoveisPorPessoa.Designer.cs">
+      <DependentUpon>FrmRelacaoDeImoveisPorPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelAlugueisPorImoveis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelAlugueisPorImoveis.Designer.cs">
+      <DependentUpon>FrmRelAlugueisPorImoveis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelAlugueisPorImovel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelAlugueisPorImovel.Designer.cs">
+      <DependentUpon>FrmRelAlugueisPorImovel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Alugueis.cs" />
     <Compile Include="Modelo\Imoveis.cs" />
     <Compile Include="Modelo\Pagamentos.cs" />
@@ -160,6 +190,21 @@
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelacaoAlugueis.resx">
+      <DependentUpon>FrmRelacaoAlugueis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelacaoDeImoveis.resx">
+      <DependentUpon>FrmRelacaoDeImoveis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelacaoDeImoveisPorPessoa.resx">
+      <DependentUpon>FrmRelacaoDeImoveisPorPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelAlugueisPorImoveis.resx">
+      <DependentUpon>FrmRelAlugueisPorImoveis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelAlugueisPorImovel.resx">
+      <DependentUpon>FrmRelAlugueisPorImovel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -172,8 +217,10 @@
     <EmbeddedResource Include="FrmRelacaoPessoas.resx">
       <DependentUpon>FrmRelacaoPessoas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\RelAlugueisPorPessoa.rdlc" />
     <EmbeddedResource Include="Relatorios\Relação de Imoveis.rdlc" />
     <EmbeddedResource Include="Relatorios\RelConsultaAlugueis.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelRelacaoAlugueisImovel.rdlc" />
     <EmbeddedResource Include="Relatorios\RelRelaçãoDePessoa.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\SistemasImobiliaria.Modelo.Alugueis.datasource" />

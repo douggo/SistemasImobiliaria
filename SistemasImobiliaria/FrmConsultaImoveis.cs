@@ -100,5 +100,17 @@ namespace SistemasImobiliaria
                 atualizaTela();
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmRelacaoDeImoveis form = new FrmRelacaoDeImoveis(conexao);
+            form.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FrmRelAlugueisPorImovel form = new FrmRelAlugueisPorImovel(conexao);
+            form.Show();
+        }
     }
 }

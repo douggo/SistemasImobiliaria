@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.i_pagamentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.i_imoveis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.i_pessoas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.i_alugueis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -38,10 +42,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxDescricao = new System.Windows.Forms.TextBox();
-            this.i_pagamentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.i_imoveis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.i_pessoas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.i_alugueis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +59,30 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(559, 293);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // i_pagamentos
+            // 
+            this.i_pagamentos.DataPropertyName = "i_pagamentos";
+            this.i_pagamentos.HeaderText = "ID de Pagamento";
+            this.i_pagamentos.Name = "i_pagamentos";
+            // 
+            // i_imoveis
+            // 
+            this.i_imoveis.DataPropertyName = "i_imoveis";
+            this.i_imoveis.HeaderText = "ID de Imóvel";
+            this.i_imoveis.Name = "i_imoveis";
+            // 
+            // i_pessoas
+            // 
+            this.i_pessoas.DataPropertyName = "i_pessoas";
+            this.i_pessoas.HeaderText = "ID de Pessoa";
+            this.i_pessoas.Name = "i_pessoas";
+            // 
+            // i_alugueis
+            // 
+            this.i_alugueis.DataPropertyName = "i_alugueis";
+            this.i_alugueis.HeaderText = "ID de Aluguel";
+            this.i_alugueis.Name = "i_alugueis";
             // 
             // button1
             // 
@@ -151,36 +177,34 @@
             this.textBoxDescricao.TabIndex = 9;
             this.textBoxDescricao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDescricao_KeyPress);
             // 
-            // i_pagamentos
+            // button4
             // 
-            this.i_pagamentos.DataPropertyName = "i_pagamentos";
-            this.i_pagamentos.HeaderText = "ID de Pagamento";
-            this.i_pagamentos.Name = "i_pagamentos";
+            this.button4.Location = new System.Drawing.Point(372, 374);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(115, 43);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Relacao de Alugueis";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // i_imoveis
+            // button5
             // 
-            this.i_imoveis.DataPropertyName = "i_imoveis";
-            this.i_imoveis.HeaderText = "ID de Imóvel";
-            this.i_imoveis.Name = "i_imoveis";
-            // 
-            // i_pessoas
-            // 
-            this.i_pessoas.DataPropertyName = "i_pessoas";
-            this.i_pessoas.HeaderText = "ID de Pessoa";
-            this.i_pessoas.Name = "i_pessoas";
-            // 
-            // i_alugueis
-            // 
-            this.i_alugueis.DataPropertyName = "i_alugueis";
-            this.i_alugueis.HeaderText = "ID de Aluguel";
-            this.i_alugueis.Name = "i_alugueis";
+            this.button5.Location = new System.Drawing.Point(11, 423);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(235, 43);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "Relacao de Alugueis por Pessoas";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // FrmConsultaAlugueis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(583, 434);
+            this.ClientSize = new System.Drawing.Size(583, 518);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.textBoxDescricao);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxTipo);
@@ -218,5 +242,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn i_imoveis;
         private System.Windows.Forms.DataGridViewTextBoxColumn i_pessoas;
         private System.Windows.Forms.DataGridViewTextBoxColumn i_alugueis;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

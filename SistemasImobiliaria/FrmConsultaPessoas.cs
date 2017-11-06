@@ -101,5 +101,10 @@ namespace SistemasImobiliaria
                 atualizaTela();
             }
         }
+
+        private void comboBoxTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

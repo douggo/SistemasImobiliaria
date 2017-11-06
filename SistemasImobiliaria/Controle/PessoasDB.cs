@@ -42,20 +42,20 @@ namespace SistemasImobiliaria.Controle
                 switch (campo)
                 {
                     case 0:
+                        sql += " where i_pessoas ";
+                        nomeCampoOrdenacao = "i_pessoas";
+                        break;
+                    case 1:
+                        sql += " where nome ";
+                        nomeCampoOrdenacao = "nome";
+                        break;
+                    case 2:
                         sql += " where genero ";
                         nomeCampoOrdenacao = "genero";
                         break;
-                    case 1:
-                        sql += " where cpf ";
-                        nomeCampoOrdenacao = "cpf";
-                        break;
-                    case 2:
+                    default:
                         sql += " where endereco ";
                         nomeCampoOrdenacao = "endereco";
-                        break;
-                    default:
-                        sql += " where nome ";
-                        nomeCampoOrdenacao = "nome";
                         break;
                 }
                 switch (tipo)
@@ -85,6 +85,7 @@ namespace SistemasImobiliaria.Controle
                 cmd.CommandText = sql;
                 NpgsqlDataAdapter dat = new NpgsqlDataAdapter(cmd);
                 dat.Fill(dt);
+                MessageBox.Show(sql);
             }
             catch (NpgsqlException erro)
             {
