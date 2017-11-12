@@ -42,41 +42,41 @@ namespace SistemasImobiliaria.Controle
                 switch (campo)
                 {
                     case 0:
-                        sql += " where i_imoveis ";
+                        sql += " where cast (i_imoveis as varchar(20)) ";
                         nomeCampoOrdenacao = "i_imoveis";
                         break;
                     case 1:
-                        sql += " where upper(endereco) ";
+                        sql += " where endereco ";
                         nomeCampoOrdenacao = "endereco";
                         break;
                     case 2:
-                        sql += " where upper(cidade) ";
+                        sql += " where cidade ";
                         nomeCampoOrdenacao = "cidade";
                         break;
                     default:
-                        sql += " where upper(estado) ";
+                        sql += " where estado ";
                         nomeCampoOrdenacao = "estado";
                         break;
                 }
                 switch (tipo)
                 {
                     case 0:
-                        sql += " like upper('%" + descricao + "%')";
+                        sql += " like '%" + descricao + "%'";
                         break;
                     case 1:
-                        sql += " like upper('" + descricao + "%')";
+                        sql += " like '" + descricao + "%'";
                         break;
                     case 2:
-                        sql += " like upper('%" + descricao + "')";
+                        sql += " like '%" + descricao + "'";
                         break;
                     case 3:
-                        sql += " = upper('" + descricao + "')";
+                        sql += " = '" + descricao + "'";
                         break;
                     case 4:
-                        sql += " >= upper('" + descricao + "')";
+                        sql += " >= '" + descricao + "'";
                         break;
                     default:
-                        sql += " <= upper('" + descricao + "')";
+                        sql += " <= '" + descricao + "'";
                         break;
                 }
                 sql += " order by " + nomeCampoOrdenacao;

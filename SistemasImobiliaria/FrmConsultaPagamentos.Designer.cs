@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.i_pagamentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parcelas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -42,6 +38,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxCampo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.i_pagamentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parcelas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,35 +52,11 @@
             this.i_pagamentos,
             this.parcelas,
             this.valor,
-            this.tipos});
+            this.tipo});
             this.dataGridView1.Location = new System.Drawing.Point(13, 64);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(559, 293);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // i_pagamentos
-            // 
-            this.i_pagamentos.DataPropertyName = "i_pagamentos";
-            this.i_pagamentos.HeaderText = "ID do Pagamento";
-            this.i_pagamentos.Name = "i_pagamentos";
-            // 
-            // parcelas
-            // 
-            this.parcelas.DataPropertyName = "parcelas";
-            this.parcelas.HeaderText = "Parcelas";
-            this.parcelas.Name = "parcelas";
-            // 
-            // valor
-            // 
-            this.valor.DataPropertyName = "valor";
-            this.valor.HeaderText = "Valor";
-            this.valor.Name = "valor";
-            // 
-            // tipos
-            // 
-            this.tipos.DataPropertyName = "tipos";
-            this.tipos.HeaderText = "Tipo";
-            this.tipos.Name = "tipos";
             // 
             // button1
             // 
@@ -118,6 +94,7 @@
             this.textBoxDescricao.Name = "textBoxDescricao";
             this.textBoxDescricao.Size = new System.Drawing.Size(264, 20);
             this.textBoxDescricao.TabIndex = 21;
+            this.textBoxDescricao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDescricao_KeyPress);
             // 
             // label3
             // 
@@ -156,10 +133,10 @@
             // 
             this.comboBoxCampo.FormattingEnabled = true;
             this.comboBoxCampo.Items.AddRange(new object[] {
-            "ID do Imóvel",
-            "Endereco",
-            "Cidade",
-            "Estado"});
+            "ID do Pagamento",
+            "Parcelas",
+            "Valor",
+            "Tipo"});
             this.comboBoxCampo.Location = new System.Drawing.Point(12, 31);
             this.comboBoxCampo.Name = "comboBoxCampo";
             this.comboBoxCampo.Size = new System.Drawing.Size(136, 21);
@@ -174,12 +151,36 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Campos:";
             // 
+            // i_pagamentos
+            // 
+            this.i_pagamentos.DataPropertyName = "i_pagamentos";
+            this.i_pagamentos.HeaderText = "ID do Pagamento";
+            this.i_pagamentos.Name = "i_pagamentos";
+            // 
+            // parcelas
+            // 
+            this.parcelas.DataPropertyName = "parcelas";
+            this.parcelas.HeaderText = "Parcelas";
+            this.parcelas.Name = "parcelas";
+            // 
+            // valor
+            // 
+            this.valor.DataPropertyName = "valor";
+            this.valor.HeaderText = "Valor";
+            this.valor.Name = "valor";
+            // 
+            // tipo
+            // 
+            this.tipo.DataPropertyName = "tipo";
+            this.tipo.HeaderText = "Tipo";
+            this.tipo.Name = "tipo";
+            // 
             // FrmConsultaPagamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(583, 430);
+            this.ClientSize = new System.Drawing.Size(583, 423);
             this.Controls.Add(this.textBoxDescricao);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxTipo);
@@ -217,6 +218,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn i_pagamentos;
         private System.Windows.Forms.DataGridViewTextBoxColumn parcelas;
         private System.Windows.Forms.DataGridViewTextBoxColumn valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
     }
 }

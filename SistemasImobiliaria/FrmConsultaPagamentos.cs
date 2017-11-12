@@ -92,5 +92,11 @@ namespace SistemasImobiliaria
                 atualizaTela();
             }
         }
+
+        private void textBoxDescricao_KeyPress(object sender, KeyPressEventArgs e) {
+            if (e.KeyChar == 13) {
+                atualizaTela();
+            }
+        }
     }
 }

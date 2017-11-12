@@ -38,11 +38,11 @@ namespace SistemasImobiliaria.Controle
             try
             {
                 String sql = "SELECT * FROM pessoas";
-                String nomeCampoOrdenacao = "i_pessoass";
+                String nomeCampoOrdenacao = "i_pessoas";
                 switch (campo)
                 {
                     case 0:
-                        sql += " where i_pessoas ";
+                        sql += " where cast (i_pessoas as varchar(20)) ";
                         nomeCampoOrdenacao = "i_pessoas";
                         break;
                     case 1:
@@ -53,6 +53,10 @@ namespace SistemasImobiliaria.Controle
                         sql += " where genero ";
                         nomeCampoOrdenacao = "genero";
                         break;
+                    case 3:
+                        sql += " where cpf ";
+                        nomeCampoOrdenacao = "cpf";
+                        break;
                     default:
                         sql += " where endereco ";
                         nomeCampoOrdenacao = "endereco";
@@ -61,22 +65,22 @@ namespace SistemasImobiliaria.Controle
                 switch (tipo)
                 {
                     case 0:
-                        sql += " like '%" + descricao + "%'";
+                        sql += "like '%" + descricao + "%'";
                         break;
                     case 1:
-                        sql += " like '" + descricao + "%'";
+                        sql += "like '" + descricao + "%'";
                         break;
                     case 2:
-                        sql += " like '%" + descricao + "'";
+                        sql += "like '%" + descricao + "%'";
                         break;
                     case 3:
-                        sql += " = '" + descricao + "')";
+                        sql += "= '" + descricao + "'";
                         break;
                     case 4:
-                        sql += " >= '" + descricao + "')";
+                        sql += ">= '" + descricao + "'";
                         break;
                     default:
-                        sql += " <= '" + descricao + "')";
+                        sql += "<= '" + descricao + "'";
                         break;
                 }
                 sql += " order by " + nomeCampoOrdenacao;
@@ -85,7 +89,6 @@ namespace SistemasImobiliaria.Controle
                 cmd.CommandText = sql;
                 NpgsqlDataAdapter dat = new NpgsqlDataAdapter(cmd);
                 dat.Fill(dt);
-                MessageBox.Show(sql);
             }
             catch (NpgsqlException erro)
             {

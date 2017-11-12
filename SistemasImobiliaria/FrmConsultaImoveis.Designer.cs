@@ -179,21 +179,21 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(384, 374);
+            this.button4.Location = new System.Drawing.Point(11, 423);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(115, 43);
             this.button4.TabIndex = 16;
-            this.button4.Text = "Relatorio de Imoveis";
+            this.button4.Text = "Relatório de Imóveis";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(12, 423);
+            this.button5.Location = new System.Drawing.Point(133, 423);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(234, 43);
             this.button5.TabIndex = 17;
-            this.button5.Text = "Relatorio de Alugueis por Imovel";
+            this.button5.Text = "Relatório de Aluguéis por Imóvel";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -202,7 +202,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(583, 515);
+            this.ClientSize = new System.Drawing.Size(583, 478);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBoxDescricao);

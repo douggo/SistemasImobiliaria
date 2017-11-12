@@ -98,3 +98,8 @@ C:\Users\40717\Source\Repos\SistemasImobiliaria2\SistemasImobiliaria\obj\Debug\S
 C:\Users\40717\Source\Repos\SistemasImobiliaria2\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmRelacaoDeImoveisPorPessoa.resources
 C:\Users\40717\Source\Repos\SistemasImobiliaria2\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmRelAlugueisPorImoveis.resources
 C:\Users\40717\Source\Repos\SistemasImobiliaria2\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmRelAlugueisPorImovel.resources
+C:\Users\dolgu\Documents\Visual Studio 2017\Projects\SistemasImobiliaria\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmRelacaoAlugueis.resources
+C:\Users\dolgu\Documents\Visual Studio 2017\Projects\SistemasImobiliaria\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmRelacaoDeImoveis.resources
+C:\Users\dolgu\Documents\Visual Studio 2017\Projects\SistemasImobiliaria\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmRelacaoDeImoveisPorPessoa.resources
+C:\Users\dolgu\Documents\Visual Studio 2017\Projects\SistemasImobiliaria\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmRelAlugueisPorImoveis.resources
+C:\Users\dolgu\Documents\Visual Studio 2017\Projects\SistemasImobiliaria\SistemasImobiliaria\obj\Debug\SistemasImobiliaria.FrmRelAlugueisPorImovel.resources

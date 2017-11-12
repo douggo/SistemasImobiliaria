@@ -42,7 +42,7 @@ namespace SistemasImobiliaria.Controle
                 switch (campo)
                 {
                     case 0:
-                        sql += " where i_pagamentos ";
+                        sql += " where cast (i_pagamentos as varchar(20)) ";
                         nomeCampoOrdenacao = "i_pagamentos";
                         break;
                     case 1:
@@ -70,13 +70,13 @@ namespace SistemasImobiliaria.Controle
                         sql += " like '%" + descricao + "'";
                         break;
                     case 3:
-                        sql += " = '" + descricao + "')";
+                        sql += " = '" + descricao + "'";
                         break;
                     case 4:
-                        sql += " >= '" + descricao + "')";
+                        sql += " >= '%" + descricao + "'";
                         break;
                     default:
-                        sql += " <= '" + descricao + "')";
+                        sql += " <= '" + descricao + "'";
                         break;
                 }
                 sql += " order by " + nomeCampoOrdenacao;
